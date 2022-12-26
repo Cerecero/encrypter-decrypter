@@ -1,7 +1,9 @@
-* {
-    background: #f4f5fc;
-}
+/* {
+    
+}*/
 body {
+    background: #f4f5fc;
+    display: flex;
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
@@ -21,13 +23,32 @@ textarea.text::placeholder, .text{
     color: #0A3871;
     font-size: 32px;
 }
+textarea.result{
+    color: #000;
+    font-size: 20px;
+    text-align: center;
+}
 textarea.result::placeholder{
     color: #000;
+    font-size: 20px;
+    text-align: center;
+}
+.resultados {
+    background-color: #fff;
+    padding: 32px;
+    text-align: center;
+
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+}
+p, textarea.result, textarea.text{
+    background-color: transparent;
+    background-image: none;
 }
 button {
-    background-color: transparent;
     border: none;
     outline: none;
+
 }
 .encrypt {
     background: #0A3871;
