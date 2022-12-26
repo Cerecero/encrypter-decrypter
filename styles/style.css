@@ -1,0 +1,30 @@
+* {
+    background: #E5E5E5;
+}
+button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+.encrypt {
+    background: #0A3871;
+    padding: 24px;
+    gap: 8px;
+    width: 328px;
+    height: 67px;
+    border-radius: 24px;
+    color: #FFF;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+}
+.decrypt {
+    background: #D8DFE8;
+    border: 1px solid #0A3871;
+    padding: 24px;
+    gap: 8px;
+    width: 328px;
+    height: 67px;
+    border-radius: 24px;
+}
