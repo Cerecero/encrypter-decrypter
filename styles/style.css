@@ -1,5 +1,28 @@
 * {
-    background: #E5E5E5;
+    background: #f4f5fc;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.logo{
+    position: absolute;
+}
+textarea{
+    border: none;
+    resize: none;
+}
+textarea:focus{
+    border: none;
+    outline: none;
+}
+textarea.text::placeholder, .text{
+    color: #0A3871;
+    font-size: 32px;
+}
+textarea.result::placeholder{
+    color: #000;
 }
 button {
     background-color: transparent;
@@ -8,12 +31,12 @@ button {
 }
 .encrypt {
     background: #0A3871;
+    color: #FFF;
     padding: 24px;
     gap: 8px;
     width: 328px;
     height: 67px;
     border-radius: 24px;
-    color: #FFF;
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
@@ -22,9 +45,14 @@ button {
 .decrypt {
     background: #D8DFE8;
     border: 1px solid #0A3871;
+    color: #0A3871;
     padding: 24px;
     gap: 8px;
     width: 328px;
     height: 67px;
     border-radius: 24px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
 }
