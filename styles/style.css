@@ -1,19 +1,36 @@
-/* {
-    
-}*/
+*{
+    /*border: 1px solid red;*/
+}
 body {
     background: #f4f5fc;
-    display: flex;
+
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
 }
 .logo{
     position: absolute;
+    left: 84px;
+    top: 40px;
+}
+.content{
+    display: flex;
+}
+.encriptado{
+    margin-left: 180px;
+    margin-top: 100px;
+    margin-bottom: 72px;
+}
+.buttons {
+    
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 24px;
 }
 textarea{
     border: none;
     resize: none;
+    width: 100%;
 }
 textarea:focus{
     border: none;
@@ -35,11 +52,12 @@ textarea.result::placeholder{
 }
 .resultados {
     background-color: #fff;
-    padding: 32px;
+    padding-left: 32px;
+    padding-right: 32px;
     text-align: center;
-
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     border-radius: 32px;
+    margin: 40px 40px 40px 40px;
 }
 p, textarea.result, textarea.text{
     background-color: transparent;
