@@ -8,7 +8,7 @@ picture, video, canvas, audio, iframe, embed, object{
     max-width: 100%;
 }
 body {
-    background: #f4f5fc;
+    background: #D8DFE8;
     margin: 0;
     padding: 0;
 }
@@ -86,9 +86,13 @@ button {
     line-height: 19px;
     text-align: center;
 }
+.encrypt:hover {
+    background: red;
+    cursor: pointer;
+}
 .decrypt {
     background: #D8DFE8;
-    border: 1px solid #0A3871;
+    border: 2px solid #0A3871;
     color: #0A3871;
     padding: 24px;
     gap: 8px;
@@ -99,4 +103,8 @@ button {
     font-size: 16px;
     line-height: 19px;
     text-align: center;
+}
+.decrypt:hover {
+    background: white;
+    cursor: pointer;
 }
