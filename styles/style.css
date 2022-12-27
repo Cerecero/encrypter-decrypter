@@ -1,12 +1,16 @@
-*{
-    /*border: 1px solid red;*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*, *::before, *::after{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+picture, video, canvas, audio, iframe, embed, object{
+    display: block;
+    max-width: 100%;
 }
 body {
     background: #f4f5fc;
-
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
 }
 .logo{
     position: absolute;
@@ -18,7 +22,7 @@ body {
 }
 .encriptado{
     margin-left: 180px;
-    margin-top: 100px;
+    margin-top: 70px;
     margin-bottom: 72px;
 }
 .buttons {
@@ -54,6 +58,7 @@ textarea.result::placeholder{
     background-color: #fff;
     padding-left: 32px;
     padding-right: 32px;
+    padding-top: 30px;
     text-align: center;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     border-radius: 32px;
