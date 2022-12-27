@@ -87,7 +87,8 @@ button {
     text-align: center;
 }
 .encrypt:hover {
-    background: red;
+    background: white;
+    border: 2px solid #0A3871;
     cursor: pointer;
 }
 .decrypt {
