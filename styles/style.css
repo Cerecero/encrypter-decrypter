@@ -105,7 +105,26 @@ button {
     line-height: 19px;
     text-align: center;
 }
-.decrypt:hover {
+.decrypt:hover, .buttonCopy:hover {
     background: white;
     cursor: pointer;
+}
+.buttonCopy {
+    background-color: #FFF;
+    content:  'Copiar';
+    color: #0A3871;
+    border : 2px solid #0A3871;
+    padding : 24px;
+    gap : 8px;
+    width :328px;
+    height : 67px;
+    border-radius: 24px;
+}
+.buttonCopy::after{
+    content:  'Copiar';
+    color: #0A3871;
+    font-weight: 400;
+    font-size:16px;
+    line-height: 19px;
+    text-align: center;
 }
