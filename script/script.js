@@ -12,25 +12,17 @@ const buttonCopy = () => { /*function that create a button that copies the conte
 
     buttonCopy.setAttribute("id", "buttonCopy");
     buttonCopy.setAttribute("class", "buttonCopy");
-
-    /*buttonCopy.style.backgroundColor = '#FFF';
-    buttonCopy.style.color = '#0A3871';
-    buttonCopy.style.border = '2px solid #0A3871';
-    buttonCopy.textContent = 'Copiar';
-    buttonCopy.style.padding = "24px";
-    buttonCopy.style.gap = "8px";
-    buttonCopy.style.width =  "328px";
-    buttonCopy.style.height = "67px";
-    buttonCopy.style.borderRadius= "24px";
-    buttonCopy.style.fontWeight= "400";
-    buttonCopy.style.fontSize="16px";
-    buttonCopy.style.lineHeight= "19px";
-    buttonCopy.style.textAlign= "center";*/
-
     divResultado.appendChild(buttonCopy);
-
     functionFlagg = true;
+
+    const resultCopy= document.getElementById("buttonCopy");
+
+    resultCopy.addEventListener("click", () => { /*EventListener that copies the result of the encryption/decryption*/
+        let resultado = document.getElementById("result").value;
+        navigator.clipboard.writeText(resultado);
+});
 };
+
 
 
 const hideUI = () => { /*A simple function that hides the elements*/
@@ -42,7 +34,7 @@ const hideUI = () => { /*A simple function that hides the elements*/
     placeholderText.style.display = "none" ;  
 }
 
-buttonEncrypt.addEventListener("click", () => {
+buttonEncrypt.addEventListener("click", () => { /*EventListener that encrypts the text*/
     let text = document.getElementById("text").value;
     let resultado = document.getElementById("result");
     hideUI();
@@ -54,9 +46,10 @@ buttonEncrypt.addEventListener("click", () => {
     
 });
 
-buttonDecrypt.addEventListener("click", () => {
+buttonDecrypt.addEventListener("click", () => { /*EventListener that decrypts the text*/
     let text = document.getElementById("text").value;
     let resultado = document.getElementById("result");
     hideUI();
     return resultado.innerHTML = text.replace(/enter/g, "e").replace(/imes/g, "i").replace(/ai/g, "a").replace(/ober/g, "o").replace(/ufat/g,"u");
 });
+
