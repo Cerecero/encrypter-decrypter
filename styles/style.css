@@ -54,7 +54,7 @@ textarea.result::placeholder{
     font-size: 20px;
     text-align: center;
 }
-.resultados {
+.resultadosDiv {
     background-color: #fff;
     padding-left: 32px;
     padding-right: 32px;
