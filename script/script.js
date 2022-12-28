@@ -1,7 +1,12 @@
 const buttonEncrypt = document.getElementById("encrypt");
 const buttonDecrypt = document.getElementById("decrypt");
 
-const buttonCopy = () => {
+let functionFlagg = false;
+
+const buttonCopy = () => { /*function that create a button that copies the content into the clipboard*/
+    if (functionFlagg == true){
+        return;
+    }
     const divResultado = document.getElementById("resultadosDiv");
     const buttonCopy = document.createElement("button");
 
@@ -18,8 +23,9 @@ const buttonCopy = () => {
     buttonCopy.style.fontSize="16px";
     buttonCopy.style.lineHeight= "19px";
     buttonCopy.style.textAlign= "center";
-    
+
     divResultado.appendChild(buttonCopy);
+    functionFlagg = true;
 };
 
 
