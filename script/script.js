@@ -10,7 +10,10 @@ const buttonCopy = () => { /*function that create a button that copies the conte
     const divResultado = document.getElementById("resultadosDiv");
     const buttonCopy = document.createElement("button");
 
-    buttonCopy.style.backgroundColor = '#FFF';
+    buttonCopy.setAttribute("id", "buttonCopy");
+    buttonCopy.setAttribute("class", "buttonCopy");
+
+    /*buttonCopy.style.backgroundColor = '#FFF';
     buttonCopy.style.color = '#0A3871';
     buttonCopy.style.border = '2px solid #0A3871';
     buttonCopy.textContent = 'Copiar';
@@ -22,9 +25,10 @@ const buttonCopy = () => { /*function that create a button that copies the conte
     buttonCopy.style.fontWeight= "400";
     buttonCopy.style.fontSize="16px";
     buttonCopy.style.lineHeight= "19px";
-    buttonCopy.style.textAlign= "center";
+    buttonCopy.style.textAlign= "center";*/
 
     divResultado.appendChild(buttonCopy);
+
     functionFlagg = true;
 };
 
