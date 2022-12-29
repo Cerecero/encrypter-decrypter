@@ -11,8 +11,7 @@ const buttonCopy = () => { /*function that create a button that copies the conte
     const buttonCopy = document.createElement("button");
     const resultText = document.getElementById("result");
 
-    console.log(resultText);
-    resultText.rows = 18;
+    resultText.rows = 18; /*Adds rows to the textarea*/
 
     buttonCopy.setAttribute("id", "buttonCopy");
     buttonCopy.setAttribute("class", "buttonCopy");
