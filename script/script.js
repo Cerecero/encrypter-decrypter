@@ -1,6 +1,26 @@
 const buttonEncrypt = document.getElementById("encrypt");
 const buttonDecrypt = document.getElementById("decrypt");
 
+let textArea = document.getElementById("text");
+
+textArea.addEventListener("input", (event) => { /*EventListener that checks if there are accented letters and Uppercase letters*/
+    let warning = document.getElementById("warning");
+
+    const value = event.target.value;
+    console.log(value);
+    let accentedLetters = /[ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿ]/g;/* regular expression for accented letters*/
+    let capitalLetteres = /[A-Z]/g;/*regular expression for capital letters */
+    let checkForNumbers = /\d/;/*regular expression for numbers*/
+
+    if (checkForNumbers.test(value)  || capitalLetteres.test(value) ||accentedLetters.test(value) ){
+        /*alert("NO SE PERMITEN MINUSCULAS, numeros Y LETRAS CON ACENTOS");*/
+        event.preventDefault();
+        warning.style.color = "red";
+        warning.style.fontWeight = "bolder";
+        textArea.value = ""; /*Clears the textarea*/
+    }
+});
+
 let functionFlagg = false;
 
 const buttonCopy = () => { /*function that create a button that copies the content into the clipboard*/
@@ -26,8 +46,6 @@ const buttonCopy = () => { /*function that create a button that copies the conte
 });
 };
 
-
-
 const hideUI = () => { /*A simple function that hides the elements*/
     
     buttonCopy();
@@ -38,14 +56,23 @@ const hideUI = () => { /*A simple function that hides the elements*/
 }
 
 buttonEncrypt.addEventListener("click", () => { /*EventListener that encrypts the text*/
+
     let text = document.getElementById("text").value;
     let resultado = document.getElementById("result");
-    hideUI();
-    return resultado.innerHTML = text.replace(/e/g, "enter").replace(/i/g, "imes").replace(/a/g, "ai").replace(/o/g, "ober").replace(/u/g, "ufat");
-    /*if (text.match(/[A-Z]/)){
-        alert("Solo se permiten letras minúsculas");
+    /*let warning = document.getElementById("warning");
+
+    let accentedLetters = /[ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿ]/g;
+    let capitalLetteres = /[A-Z]/g;
+
+    if (text.match(capitalLetteres) || text.match(accentedLetters)){
+        warning.style.color = "red";
     }*/
-    /*warning.style.color = "red";*/
+
+
+    hideUI();
+    
+    return resultado.innerHTML = text.replace(/e/g, "enter").replace(/i/g, "imes").replace(/a/g, "ai").replace(/o/g, "ober").replace(/u/g, "ufat");
+
     
 });
 
