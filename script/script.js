@@ -18,6 +18,9 @@ textArea.addEventListener("input", (event) => { /*EventListener that checks if t
         warning.style.color = "red";
         warning.style.fontWeight = "bolder";
         textArea.value = ""; /*Clears the textarea*/
+    }else{
+        warning.style.color = "black";
+        warning.style.fontWeight = "normal";
     }
 });
 
