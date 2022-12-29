@@ -9,6 +9,10 @@ const buttonCopy = () => { /*function that create a button that copies the conte
     }
     const divResultado = document.getElementById("resultadosDiv");
     const buttonCopy = document.createElement("button");
+    const resultText = document.getElementById("result");
+
+    console.log(resultText);
+    resultText.rows = 18;
 
     buttonCopy.setAttribute("id", "buttonCopy");
     buttonCopy.setAttribute("class", "buttonCopy");
