@@ -12,12 +12,11 @@ textArea.addEventListener("input", (event) => { /*EventListener that checks if t
     let capitalLetteres = /[A-Z]/g;/*regular expression for capital letters */
     let checkForNumbers = /\d/;/*regular expression for numbers*/
 
-    if (checkForNumbers.test(value)  || capitalLetteres.test(value) ||accentedLetters.test(value) ){
-        /*alert("NO SE PERMITEN MINUSCULAS, numeros Y LETRAS CON ACENTOS");*/
+    if (checkForNumbers.test(value)  || capitalLetteres.test(value) ||accentedLetters.test(value) ){ /*Checks if there are accented letters, capital letters or numbers*/
         event.preventDefault();
         warning.style.color = "red";
         warning.style.fontWeight = "bolder";
-        textArea.value = ""; /*Clears the textarea*/
+        textArea.value = value.replace(accentedLetters, "").replace(capitalLetteres, "").replace(checkForNumbers, ""); /*Removes the accented letters, capital letters and numbers*/
     }else{
         warning.style.color = "black";
         warning.style.fontWeight = "normal";
@@ -62,15 +61,6 @@ buttonEncrypt.addEventListener("click", () => { /*EventListener that encrypts th
 
     let text = document.getElementById("text").value;
     let resultado = document.getElementById("result");
-    /*let warning = document.getElementById("warning");
-
-    let accentedLetters = /[ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿ]/g;
-    let capitalLetteres = /[A-Z]/g;
-
-    if (text.match(capitalLetteres) || text.match(accentedLetters)){
-        warning.style.color = "red";
-    }*/
-
 
     hideUI();
     
