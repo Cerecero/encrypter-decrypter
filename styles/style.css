@@ -168,3 +168,37 @@ button {
         top: 24px;
     }
 }
+@media (max-width: 414px) { /*tablet size*/
+    .content{
+        flex-direction: column;
+    }
+    .encriptado{
+        margin-left: 10vw;
+        margin-top: 15vh;
+    }
+    .buttons{
+        flex-direction: column;
+        gap: 16px;
+    }
+    .encrypt{
+        width: 100%;
+    }
+    .decrypt{
+        width: 100%;
+    }
+    .resultadosDiv{
+
+        padding-bottom: 50px;
+    }
+    #munheco {
+        display: none;
+    }
+    .buttonCopy{
+        width: 100%;
+    }
+    .logo{
+        position: absolute;
+        left: 24px;
+        top: 24px;
+    }
+}
