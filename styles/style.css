@@ -87,7 +87,7 @@ button {
     text-align: center;
 }
 .encrypt:hover {
-    background: white;
+    background: #105575;
     border: 2px solid #0A3871;
     cursor: pointer;
 }
@@ -107,6 +107,10 @@ button {
 }
 .decrypt:hover, .buttonCopy:hover {
     background: white;
+    cursor: pointer;
+}
+.buttonCopy:hover{
+    background: #D8DFE8;
     cursor: pointer;
 }
 .buttonCopy {
