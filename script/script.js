@@ -4,7 +4,6 @@ const buttonDecrypt = document.getElementById("decrypt");
 let textArea = document.getElementById("text");
 
 textArea.addEventListener("input", (event) => { /*EventListener that checks if there are accented letters and Uppercase letters*/
-    let warning = document.getElementById("warning");
 
     const value = event.target.value;
     console.log(value);
@@ -31,9 +30,6 @@ const buttonCopy = () => { /*function that create a button that copies the conte
     }
     const divResultado = document.getElementById("resultadosDiv");
     const buttonCopy = document.createElement("button");
-    const resultText = document.getElementById("result");
-
-    resultText.rows = 18; /*Adds rows to the textarea*/
 
     buttonCopy.setAttribute("id", "buttonCopy");
     buttonCopy.setAttribute("class", "buttonCopy");
@@ -48,6 +44,20 @@ const buttonCopy = () => { /*function that create a button that copies the conte
 });
 };
 
+const resultRows = () => {/*change the rows*/
+    const resultText = document.getElementById("result");
+
+    const mediaQueryString = '(max-width: 768px)';
+    const mediaQuery = window.matchMedia(mediaQueryString);
+
+        /* Check if the media query is active*/
+    if (mediaQuery.matches) {
+        
+    } else {
+    /*The media query is not active*/
+        resultText.rows = 18; /*Adds rows to the textarea*/
+    }
+}
 const hideUI = () => { /*A simple function that hides the elements*/
     
     buttonCopy();
@@ -63,6 +73,7 @@ buttonEncrypt.addEventListener("click", () => { /*EventListener that encrypts th
     let resultado = document.getElementById("result");
 
     hideUI();
+    resultRows();
     
     return resultado.innerHTML = text.replace(/e/g, "enter").replace(/i/g, "imes").replace(/a/g, "ai").replace(/o/g, "ober").replace(/u/g, "ufat");
 
@@ -73,6 +84,7 @@ buttonDecrypt.addEventListener("click", () => { /*EventListener that decrypts th
     let text = document.getElementById("text").value;
     let resultado = document.getElementById("result");
     hideUI();
+    resultRows();
     return resultado.innerHTML = text.replace(/enter/g, "e").replace(/imes/g, "i").replace(/ai/g, "a").replace(/ober/g, "o").replace(/ufat/g,"u");
 });
 
