@@ -168,7 +168,7 @@ button {
         top: 24px;
     }
 }
-@media (max-width: 414px) { /*tablet size*/
+@media (max-width: 414px) { /*phone size*/
     .content{
         flex-direction: column;
     }
