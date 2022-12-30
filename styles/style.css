@@ -52,6 +52,7 @@ textarea.result{
 textarea.result::placeholder{
     color: #000;
     font-size: 20px;
+    font-weight: bold;
     text-align: center;
 }
 .resultadosDiv {
@@ -59,10 +60,10 @@ textarea.result::placeholder{
     padding-left: 32px;
     padding-right: 32px;
     padding-top: 30px;
-    text-align: center;
-    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.1);
     border-radius: 32px;
     margin: 40px 40px 40px 40px;
+    text-align: center;
 }
 p, textarea.result, textarea.text{
     background-color: transparent;
@@ -71,7 +72,6 @@ p, textarea.result, textarea.text{
 button {
     border: none;
     outline: none;
-
 }
 .encrypt {
     background: #0A3871;
@@ -131,4 +131,40 @@ button {
     font-size:16px;
     line-height: 19px;
     text-align: center;
+}
+@media (max-width: 768px) { /*tablet size*/
+    .content{
+        flex-direction: column;
+    }
+    .encriptado{
+        margin-left: 10vw;
+        margin-top: 20vh;
+        margin-right: 10vw;
+        margin-bottom: 0;
+    }
+    .buttons{
+        flex-direction: row;
+        gap: 16px;
+    }
+    .encrypt{
+        width: 100%;
+    }
+    .decrypt{
+        width: 100%;
+    }
+    .resultadosDiv{
+
+        padding-bottom: 50px;
+    }
+    #munheco {
+        display: none;
+    }
+    .buttonCopy{
+        width: 100%;
+    }
+    .logo{
+        position: absolute;
+        left: 24px;
+        top: 24px;
+    }
 }
