@@ -48,6 +48,8 @@ textarea.result{
     color: #000;
     font-size: 20px;
     text-align: center;
+    height: auto;
+    word-break: break-word;
 }
 textarea.result::placeholder{
     color: #000;
@@ -57,13 +59,13 @@ textarea.result::placeholder{
 }
 .resultadosDiv {
     background-color: #fff;
-    padding-left: 32px;
-    padding-right: 32px;
-    padding-top: 30px;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.1);
     border-radius: 32px;
     margin: 40px 40px 40px 40px;
-    text-align: center;
+    text-align: center;  
+    height: auto;
+    padding: 40px 25px;
+    word-break: break-word;
 }
 p, textarea.result, textarea.text{
     background-color: transparent;
@@ -153,11 +155,14 @@ button {
         width: 100%;
     }
     .resultadosDiv{
-
-        padding-bottom: 50px;
+        height: auto;
     }
     #munheco {
         display: none;
+    }
+    textarea.result{
+        resize: vertical;
+        overflow: auto;
     }
     .buttonCopy{
         width: 100%;

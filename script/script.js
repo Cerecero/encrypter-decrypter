@@ -6,7 +6,7 @@ let textArea = document.getElementById("text");
 textArea.addEventListener("input", (event) => { /*EventListener that checks if there are accented letters and Uppercase letters*/
 
     const value = event.target.value;
-    console.log(value);
+    /*console.log(value);*/
     let accentedLetters = /[ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿ]/g;/* regular expression for accented letters*/
     let capitalLetteres = /[A-Z]/g;/*regular expression for capital letters */
     let checkForNumbers = /\d/;/*regular expression for numbers*/
@@ -45,17 +45,18 @@ const buttonCopy = () => { /*function that create a button that copies the conte
 };
 
 const resultRows = () => {/*change the rows*/
-    const resultText = document.getElementById("result");
+    const resultTextArea = document.getElementById("result");
 
+    
     const mediaQueryString = '(max-width: 768px)';
     const mediaQuery = window.matchMedia(mediaQueryString);
 
         /* Check if the media query is active*/
     if (mediaQuery.matches) {
-        
+        console.log("The media query is active");
     } else {
     /*The media query is not active*/
-        resultText.rows = 18; /*Adds rows to the textarea*/
+        resultTextArea.rows = 18; /*Adds rows to the textarea*/
     }
 }
 const hideUI = () => { /*A simple function that hides the elements*/
