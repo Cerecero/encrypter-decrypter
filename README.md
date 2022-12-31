@@ -1,2 +1,2 @@
 # encrypter-decrypter
-<a href="https://cerecero.github.io/encrypter-decypher/" target="_blank">Link</a>
+[Link to the Github Page](https://cerecero.github.io/encrypter-decypher/")
