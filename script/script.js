@@ -7,15 +7,16 @@ textArea.addEventListener("input", (event) => { /*EventListener that checks if t
 
     const value = event.target.value;
     /*console.log(value);*/
-    let accentedLetters = /[ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿ]/g;/* regular expression for accented letters*/
-    let capitalLetteres = /[A-Z]/g;/*regular expression for capital letters */
-    let checkForNumbers = /\d/;/*regular expression for numbers*/
+    const accentedLetters = /[ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿ]/g;/* regular expression for accented letters*/
+    const capitalLetteres = /[A-Z]/g;/*regular expression for capital letters */
+    const checkForNumbers = /\d/;/*regular expression for numbers*/
+    const specialCharacters = /[^a-zA-Z0-9]/;/*regular expression for special characters*/
 
-    if (checkForNumbers.test(value)  || capitalLetteres.test(value) ||accentedLetters.test(value) ){ /*Checks if there are accented letters, capital letters or numbers*/
+    if (checkForNumbers.test(value)  || capitalLetteres.test(value) ||accentedLetters.test(value)|| specialCharacters.test(value) ){ /*Checks if there are accented letters, capital letters or numbers*/
         event.preventDefault();
         warning.style.color = "red";
         warning.style.fontWeight = "bolder";
-        textArea.value = value.replace(accentedLetters, "").replace(capitalLetteres, "").replace(checkForNumbers, ""); /*Removes the accented letters, capital letters and numbers*/
+        textArea.value = value.replace(accentedLetters, "").replace(capitalLetteres, "").replace(checkForNumbers, "").replace(specialCharacters, ""); /*Removes the accented letters, capital letters and numbers*/
     }else{
         warning.style.color = "black";
         warning.style.fontWeight = "normal";
