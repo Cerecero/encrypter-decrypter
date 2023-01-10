@@ -1,3 +1,9 @@
+:root{
+    --color-background: #D8DFE8;
+    --color-blackText: #000;
+    --color-resultBackground: #fff;
+    --color-blueText : #0A3871;
+}
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 *, *::before, *::after{
     box-sizing: border-box;
@@ -8,7 +14,7 @@ picture, video, canvas, audio, iframe, embed, object{
     max-width: 100%;
 }
 body {
-    background: #D8DFE8;
+    background: var(--color-background);
     margin: 0;
     padding: 0;
 }
@@ -45,24 +51,24 @@ textarea:focus{
     outline: none;
 }
 textarea.text::placeholder, .text{
-    color: #0A3871;
+    color: var(--color-blueText);
     font-size: 32px;
 }
 textarea.result{
-    color: #000;
+    color: var(--color-blackText);
     font-size: 20px;
     text-align: center;
     height: auto;
     word-break: break-word;
 }
 textarea.result::placeholder{
-    color: #000;
+    color: var(--color-textblack);
     font-size: 20px;
     font-weight: bold;
     text-align: center;
 }
 .resultadosDiv {
-    background-color: #fff;
+    background-color: var(--color-resultBackground);
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.1);
     border-radius: 32px;
     margin: 40px 40px 40px 40px;
@@ -80,7 +86,7 @@ button {
     outline: none;
 }
 .encrypt {
-    background: #0A3871;
+    background: var(--color-blueText);
     color: #FFF;
     padding: 24px;
     gap: 8px;
@@ -94,13 +100,13 @@ button {
 }
 .encrypt:hover {
     background: #105575;
-    border: 2px solid #0A3871;
+    border: 2px solid var(--color-blueText);
     cursor: pointer;
 }
 .decrypt {
-    background: #D8DFE8;
-    border: 2px solid #0A3871;
-    color: #0A3871;
+    background: var(--color-background);
+    border: 2px solid var(--color-blueText);
+    color: var(--color-blueText);
     padding: 24px;
     gap: 8px;
     width: 328px;
@@ -112,18 +118,18 @@ button {
     text-align: center;
 }
 .decrypt:hover, .buttonCopy:hover {
-    background: white;
+    background: var(--color-resultBackground);
     cursor: pointer;
 }
 .buttonCopy:hover{
-    background: #D8DFE8;
+    background: var(--color-background);
     cursor: pointer;
 }
 .buttonCopy {
-    background-color: #FFF;
+    background-color: var(--color-resultBackground);
     content:  'Copiar';
-    color: #0A3871;
-    border : 2px solid #0A3871;
+    color: var(--color-blueText);
+    border : 2px solid var(--color-blueText);
     padding : 24px;
     gap : 8px;
     width :328px;
@@ -132,7 +138,7 @@ button {
 }
 .buttonCopy::after{
     content:  'Copiar';
-    color: #0A3871;
+    color: var(--color-blueText);
     font-weight: 400;
     font-size:16px;
     line-height: 19px;
