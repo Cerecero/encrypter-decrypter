@@ -1,3 +1,17 @@
+//Dark Mode
+const datkModeToggle = document.getElementById('toggle_switch');
+const logo = document.getElementById("logo");
+
+datkModeToggle.addEventListener('change', function (event) {
+    if (event.target.checked) {
+        document.body.classList.add('dark');
+        logo.src = "images/alura-darkmode.svg";
+    } else {
+        logo.src = "images/alura.svg";
+        document.body.classList.remove('dark');
+    }
+});
+
 const buttonEncrypt = document.getElementById("encrypt");
 const buttonDecrypt = document.getElementById("decrypt");
 
@@ -18,7 +32,7 @@ textArea.addEventListener("input", (event) => { /*EventListener that checks if t
         warning.style.fontWeight = "bolder";
         textArea.value = value.replace(accentedLetters, "").replace(capitalLetteres, "").replace(checkForNumbers, "").replace(specialCharacters, ""); /*Removes the accented letters, capital letters and numbers*/
     }else{
-        warning.style.color = "black";
+        // warning.style.color = "black";
         warning.style.fontWeight = "normal";
     }
 });
