@@ -60,14 +60,14 @@ body {
 .dark p#placeholderText{
     color:  var(--color-blackText);
 }
-.dark .text::placeholder, .dark .text, .dark .result, .dark .result::placeholder, .dark p#placeholderText, .dark #warning, .dark button.encrypt{
+.dark .text::placeholder, .dark .text, .dark .result, .dark .result::placeholder, .dark p#placeholderText, .dark #warning, .dark button.encrypt, .dark a:visited{
     color: #c7d4fc;
 }
 .dark input:checked + label:after {
-    background-color: #c7d4fc;
+    background-color: #0A3871;
 }
 .dark label {
-    background-color: #253770;
+    background-color: #D8DFE8;
 }
 footer{
     text-align: center;
